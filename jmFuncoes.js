@@ -15,3 +15,21 @@ $(document).ready(function() {
 	      $("#campo_mecanismo_atribuicao").val(papel);
 	});
 });
+
+//Bloquear envio a partir do ano de um determinado campo de data
+var data = $("#campoData").val();
+var ano = data.substring(6,10)    
+$("#campoAno").val(ano);
+
+if(ano == "2019"){
+   throw "Mensagem de erro "
+}
+
+//Bloquear envio a partir do dia de um determinado campo de data
+var data = $("#campoData").val();
+var dia = data.substring(0,2)    
+$("#campoAno").val(dia);
+
+if(dia == "2019"){
+   throw "Mensagem de erro "
+}
