@@ -30,6 +30,15 @@ var data = $("#campoData").val();
 var dia = data.substring(0,2)    
 $("#campoAno").val(dia);
 
-if(dia == "2019"){
+if(dia == "01"){
+   throw "Mensagem de erro "
+}
+
+//Bloquear envio a partir do dia de um determinado campo de data
+var data = $("#campoData").val();
+var mes = data.substring(3,5)    
+$("#campoAno").val(mes);
+
+if(mes == "02"){
    throw "Mensagem de erro "
 }
