@@ -42,3 +42,15 @@ $("#campoAno").val(mes);
 if(mes == "02"){
    throw "Mensagem de erro "
 }
+
+//Função para exibir alerta no formulário
+function fluigAlert(message, title,label){
+	 message = typeof message !== 'undefined' ? message : "";
+	 title = typeof title !== 'undefined' ? title : "Alert";
+	 label = typeof label !== 'undefined' ? label : "OK";
+	 window.parent.FLUIGC.message.alert({
+	  message: message,
+	  title: title,
+	  label: label
+	  });
+}
