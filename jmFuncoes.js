@@ -54,3 +54,39 @@ function fluigAlert(message, title,label){
 	  label: label
 	  });
 }
+
+//Função para desativar botões e tornar campos em readonly
+function SetReadOnly(fieldId, block) {
+    $(fieldId).each(function () {
+        switch (this.type) {
+            case "file":
+            case "password":
+            case "text":
+            case "zoom":
+            case "number":
+            case "date":
+            case "textarea":
+            $(this).attr('readonly', block);
+                break;
+           // case "checkbox":
+           // 	{ if (block == true) {$('#'+this.name).attr('disabled')} else {$('#'+this.name).removeAttr('disabled')}}
+            case "radio":
+                this.checked = block;
+                break;
+            case "select-one":
+            $('#'+this.name + ' option:not(:selected)').attr('disabled', block);
+            break;
+            case "image":
+            case "button":
+             if(block) {$(this).hide();} else {$(this).show();}
+            break;
+        }
+    });
+}
+
+if (mode != "ADD") {
+	SetReadOnly('.ini', true);
+	$(".input-group div").removeAttr("onclick");
+	$('#btnNovo').hide();
+ }
+}
