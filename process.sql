@@ -35,4 +35,11 @@ from fluig.ml0011764
 select *
 from fluig.ml0011800
 
+--oba reserve
+select *
+from fluig.ml0012091
+--oba reserve passageiros
+select *
+from fluig.ml0012153
+
 
