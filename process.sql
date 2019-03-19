@@ -17,10 +17,12 @@ from fluig.ml0011980
 --emprestimo
 select *
 from fluig.ml0011443
-
 --emprestimo descontos
 select *
 from fluig.ml0011532
+--emprestimo impostos
+select *
+from fluig.ml0011554
 
 --antecipacao
 select *
