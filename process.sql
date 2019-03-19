@@ -28,6 +28,10 @@ from fluig.ml0011554
 select *
 from fluig.ml001619;
 
+--compra de equipamentos lista
+select *
+from fluig.ml0012234
+
 --obatarefas
 select *
 from fluig.ml0011764
