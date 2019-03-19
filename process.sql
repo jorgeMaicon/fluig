@@ -14,8 +14,9 @@ from fluig.ml0011712;
 select *
 from fluig.ml0011980
 
-
-
+--emprestimo
+select *
+from fluig.ml0011443
 
 --antecipacao
 select *
