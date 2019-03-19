@@ -18,6 +18,10 @@ from fluig.ml0011980
 select *
 from fluig.ml0011443
 
+--emprestimo descontos
+select *
+from fluig.ml0011532
+
 --antecipacao
 select *
 from fluig.ml001619;
