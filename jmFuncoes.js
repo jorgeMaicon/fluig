@@ -90,3 +90,14 @@ if (mode != "ADD") {
 	$('#btnNovo').hide();
  }
 }
+
+function zoomEmpresa(){
+	var filtro = $("#unidade").val();
+    tdizoom.open(
+            "get_empresa_nf",
+            "nroempresa,Código,nomereduzido,Empresa", "nroempresa,Código,nomereduzido,Empresa",
+            "Selecione uma Empresa",
+            "unidade,"+filtro,
+            "empresaNf"
+            );
+}
