@@ -1,12 +1,22 @@
-//Dispara mensagem de erro dentro da função beforeSendValidate 
+//DISPARA MENSAGEM DE ERRO
 if(condição){
      throw "Escreva aqui a mensagem de erro "
 }
 
-//Exibe popup de aviso
-if (condição){
-     fluigAlert('Mensagem', 'ATENÇÃO');
+//FUNÇÃO DE ALERTA
+function fluigAlert(message, title,label){
+	 message = typeof message !== 'undefined' ? message : "";
+	 title = typeof title !== 'undefined' ? title : "Alert";
+	 label = typeof label !== 'undefined' ? label : "OK";
+	 window.parent.FLUIGC.message.alert({
+	  message: message,
+	  title: title,
+	  label: label
+	  });
 }
+//chamada
+fluigAlert('Mensagem', 'ATENÇÃO');
+
 
 //Função que pega o valor de um campo, e utiliza como final de código de papel pre determinado
 $(document).ready(function() {	
@@ -43,17 +53,7 @@ if(mes == "02"){
    throw "Mensagem de erro "
 }
 
-//Função para exibir alerta no formulário
-function fluigAlert(message, title,label){
-	 message = typeof message !== 'undefined' ? message : "";
-	 title = typeof title !== 'undefined' ? title : "Alert";
-	 label = typeof label !== 'undefined' ? label : "OK";
-	 window.parent.FLUIGC.message.alert({
-	  message: message,
-	  title: title,
-	  label: label
-	  });
-}
+
 
 //Função para desativar botões e tornar campos em readonly
 function SetReadOnly(fieldId, block) {
@@ -87,8 +87,6 @@ function SetReadOnly(fieldId, block) {
 if (mode != "ADD") {
 	SetReadOnly('.ini', true);
 	$(".input-group div").removeAttr("onclick");
-	$('#btnNovo').hide();
- }
 }
 
 function zoomEmpresa(){
